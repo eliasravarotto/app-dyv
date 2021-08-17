@@ -180,6 +180,7 @@
           .then(res => {
             this.dialogAddVehicle = false
             this.submitting = false
+            this.myVehicles = null
             this.getMyVehicles()
           })
           .catch(error =>{

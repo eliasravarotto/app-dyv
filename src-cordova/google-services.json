@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "325876224335",
+    "project_id": "dyv-mobile-aplication",
+    "storage_bucket": "dyv-mobile-aplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325876224335:android:ea743852351ed3e335353a",
+        "android_client_info": {
+          "package_name": "derkay.vargas.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "325876224335-uk1mb8ooer869o4rgciv6kosv6oe93iv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWEAB8Wqq_94WpsFp1DSnj3RGPqUaBxM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "325876224335-uk1mb8ooer869o4rgciv6kosv6oe93iv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,6 +2,8 @@
   <q-page class="">
 
     <HeaderComponent />
+
+    <FirstStepsComponent />
     
     <!-- MIS VEHICULOS -->
     <template>
@@ -55,10 +57,11 @@
 
 <script>
 import HeaderComponent from 'components/HeaderComponent.vue'
+import FirstStepsComponent from 'components/FirstStepsComponent.vue'
 
 export default {
   name: 'PageHome',
-  components: { HeaderComponent },
+  components: { HeaderComponent, FirstStepsComponent },
   data () {
     return {
     }

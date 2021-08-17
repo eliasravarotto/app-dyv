@@ -1,11 +1,8 @@
 <template>
   <q-page>
-      <transition
-          appear
-          enter-active-class="animated fadeIn"
-          leave-active-class="animated fadeOut"
-        >
-        <div style="width: 100%; height: 40vh;" class="bg-auth">
+      <transition appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+        <div style="width: 100%; height: 40vh;" class="flex justify-center items-center">
+          <img src="~assets/dyv.svg" class="logo">
         </div>
       </transition>
 
@@ -15,12 +12,8 @@
           leave-active-class="animated fadeOut"
         >
         <div style="width: 100%; height: 60vh">
-
-
-
-
-          <div class="row q-pa-lg">
-            <div class="col-xs-12">
+          <div class="row q-pa-lg justify-center">
+            <div class="col-xs-11 col-sm-8 col-md-5">
               <q-form class="q-gutter-md" @submit="onSubmit" @reset="onReset">
                 <q-input v-model="data.email"
                          label="Email *"
@@ -125,7 +118,6 @@ export default {
           notify.type = 'negative';
           this.showNotify(notify)
         })
-      console.log(this.submitting);
     },
     onReset () {
       this.data.email = null
@@ -146,8 +138,8 @@ export default {
 </script>
 
 <style type="text/css" scoped>
-  .bg-auth{
-    background: url('./../../../public/appbg.png');
-    background-size: cover;
+  .logo{
+    width:70%;
+    max-width: 300px;
   }
 </style>

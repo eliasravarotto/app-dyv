@@ -6,13 +6,13 @@
         >
     <q-page>
 
-      <div style="width: 100%; height: 25vh;" class="bg-auth">
+      <div style="width: 100%; height: 25vh;" class="flex justify-center items-center">
+        <img src="~assets/dyv.svg" class="logo">
       </div>
 
       <div style="width: 100%; height: 75vh">
-
-        <div class="row q-pa-lg">
-          <div class="col-xs-12">
+        <div class="row q-pa-lg justify-center full-height flex items-end">
+          <div class="col-xs-11 col-sm-8 col-md-5">
             <q-form class="q-gutter-md" @submit="onSubmit" @reset="onReset">
               <q-input
                 color="teal"
@@ -169,9 +169,9 @@ export default {
   .q-gutter-y-md > *, .q-gutter-md > * {
     margin-top: 5px;
 }
-  .bg-auth{
-    background: url('./../../../public/appbg.png');
-    background-size: cover;
-    background-position: center;
+  .logo{
+    width:50%;
+    max-width: 240px;
+    max-height: 190px;
   }
 </style>

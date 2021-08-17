@@ -6,52 +6,57 @@
         >
     <q-page>
       <template v-if="!showSuccess">
-        <div style="width: 100%; height: 30vh;" class="bg-auth">
+        <div style="width: 100%; height: 30vh;" class="flex justify-center items-center">
+          <img src="~assets/dyv.svg" class="logo">
         </div>
         <div style="width: 100%; height: 70vh;">
-          <div class="row q-pa-lg">
-            <div class="col-xs-12 text-center">
-              <p class="text-muted q-mb-sm title-forgot-pass">¿Olvidaste tu contraseña?</p>
-              <p class="text-muted q-mb-sm">No hay problema.</p>
-              <p class="text-muted">Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.</p>
-            </div>
-          </div>
-          <div class="row q-pa-lg">
-            <div class="col-xs-12">
-              <q-form class="q-gutter-md" @submit="onSubmit">
-                <q-input 
-                  v-model="data.email"
-                  label="Email *"
-                  color="teal">
-                  <template v-slot:append>
-                    <q-icon name="mail" />
-                  </template>
-                </q-input>
+          <div class="row q-pa-lg justify-center full-height flex items-end">
+            <div class="col-xs-11 col-sm-8 col-md-5 text-center">
+              <div class="row">
+                <div class="col-12">
+                  <div class="full-width">
+                    <p class="text-muted q-mb-sm title-forgot-pass">¿Olvidaste tu contraseña?</p>
+                    <p class="text-muted q-mb-sm">No hay problema.</p>
+                    <p class="text-muted">Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.</p>
+                  </div>
+                  
+                  <div class="full-width">
+                    <q-form class="q-gutter-md" @submit="onSubmit">
+                      <q-input 
+                        v-model="data.email"
+                        label="Email *"
+                        color="teal">
+                        <template v-slot:append>
+                          <q-icon name="mail" />
+                        </template>
+                      </q-input>
 
-                <div class="row">
-                  <div class="col-12 text-center">
-                    <q-btn 
-                      type="submit" 
-                      color="secondary" 
-                      class="full-width"
-                      :loading="submitting"
-                      label="Enviar Link">
-                      <template v-slot:loading>
-                        <q-spinner-facebook />
-                      </template>
-                    </q-btn>
+                      <div class="row">
+                        <div class="col-12 text-center">
+                          <q-btn 
+                            type="submit" 
+                            color="secondary" 
+                            class="full-width"
+                            :loading="submitting"
+                            label="Enviar Link">
+                            <template v-slot:loading>
+                              <q-spinner-facebook />
+                            </template>
+                          </q-btn>
+                        </div>
+                      </div>
+
+                      <div class="row q-pt-md">
+                        <div class="col-12 text-center">
+                          <p><q-btn flat :to="{ name: 'login'}" class="text-muted">Volver al inicio</q-btn></p>
+                        </div>
+                      </div>
+                    </q-form>
                   </div>
                 </div>
-
-                <div class="row q-pt-md">
-                  <div class="col-12 text-center">
-                    <p><q-btn flat :to="{ name: 'login'}" class="text-muted">Volver al inicio</q-btn></p>
-                  </div>
-                </div>
-
-              </q-form>
+              </div>
             </div>
-          </div>
+            </div>
         </div>
 
       </template>
@@ -135,9 +140,8 @@ export default {
 .title-forgot-pass{
   font-size: 25px
 }
-  .bg-auth{
-    background: url('./../../../public/appbg.png');
-    background-size: cover;
-    background-position: center;
+  .logo{
+    width:70%;
+    max-width: 300px;
   }
 </style>

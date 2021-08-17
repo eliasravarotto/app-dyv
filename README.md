@@ -30,3 +30,5 @@ See [Configuring quasar.conf.js](https://v1.quasar.dev/quasar-cli/quasar-conf-js
 $: keytool -genkey -alias eliaskey -keystore debug.keystore -dname "CN=Android Debug,O=Android,C=US" -keyalg RSA -keysize 2048 -validity 20000
 
 $: jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore debug.keystore app-debug.apk eliaskey
+
+$: zipalign -v 4 <path-to-same-apk-file> HelloWorld.apk
